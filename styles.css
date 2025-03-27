@@ -1,0 +1,12 @@
+/* 
+Consider the common elements that will exist across all your pages (such as the header and footer) and build those elements first. It will then be much easier and quicker to add/change the unique content on every page.
+
+All pages should look good and work well at browser widths between 320 and 3200px wide. It will be up to you to decide where your specific design needs media queries (if at all).
+
+The site must follow follow these restrictions:
+
+Use the attached logo and favicon to follow the resort's branding. The logo can be recoloured to any colour you need for your design
+The website should include the favicon for every page of the website
+The client wants the weather in their location (Cancun, Mexico) to be displayed in the website's header. 
+Each page should be no more than 1.8MB in filesize (including any fonts, external files and media assets). You will need to optimize your media to meet this limit.
+*/
