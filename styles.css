@@ -11,33 +11,100 @@ will be up to you to decide where your specific design needs media queries (if a
     and media assets). You will need to optimize your media to meet this limit. */
 
 
-    body {
-        background-color: rgb(179, 152, 165);
-        margin:0 0;
-    }
 
 
-    main{
-        background-color: #FBF3E6;  /*MAKE THIS THE MAIN COLOUR WHEN FIGURE OUT HOW TO CHANGE SVG COLOUR*/
-    }
-
-    #Accomodations{
-        background-color: #D2C7B2;
-    }
+body {
+    background-color: rgb(179, 152, 165);
+    margin:0 0;
+    color: #172A3A;
+}
 
 
+    /* HEADER */
 
-    #MomentsGrid {
-        display: grid;
-        grid-template-columns: 2;
-    }
+#overlap{
+display:grid;
+grid-template-columns: 1fr;
+justify-items: center;
+}
+
+#overlap > *{
+    grid-column-start: 1;
+    grid-row-start: 1;
+    column-span: all;
+}
+
+#herobanner{
+    max-width: 100%;
+}
+
+#LOGO{ 
+    margin-top: 2rem;
+
+}
 
 
-    .Review {
-        background-color: #E2C486;
-    }
+/* header #LOGO{
+    grid-column-start:2 ;
+    align-items: center;
+    justify-content: center;
+}
 
-    footer {
-        color:white;
-        background-color: #172A3A;
-    }
+#herobanner{
+    width: 100%;
+    column-span: 4all;    
+    grid-column-start: 1;
+}
+
+#herobanner > *{
+    grid-column-start: 1;
+    grid-row-start: 1;
+} */
+
+    
+    /* NAV BAR */
+
+ul {
+    background-color: #B9E4F4;
+}
+ul li{
+    list-style-type: none;
+}
+
+ul li a{
+    text-decoration: none;
+}
+
+
+main{
+    background-color: #FBF3E6;  /*MAKE THIS THE MAIN COLOUR WHEN FIGURE OUT HOW TO CHANGE SVG COLOUR*/
+}
+
+#Accomodations{
+    background-color: #D2C7B2;
+}
+
+object{
+    color: black;
+}
+
+#MomentsGrid {
+    display: grid;
+    grid-template-columns: 2;
+}
+
+
+.Review {
+    background-color: #E2C486;
+}
+
+footer {
+    color:white;
+    background-color: #172A3A;
+}
+
+button{
+    color:#172A3A;
+    background-color: #8F8389;
+    border: none;
+}
