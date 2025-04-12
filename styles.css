@@ -1,4 +1,8 @@
-* { box-sizing: border-box } 
+* { 
+    box-sizing: border-box;
+    margin: 0;
+    padding:0
+ } 
 
 /* Consider the common elements that will exist across all your pages (such as the header and footer) 
 and build those elements first. It will then be much easier and quicker to add/change the unique content 
@@ -86,7 +90,7 @@ nav {
 
 /*Header END*/
 body {
-    background-color:#FBF3E6;
+    background-color: #B398A5; /* MAKE THIS BACKGROUND COLOUR AFTER EVERYTHING WORKS #FBF3E6;*/
     color: #172A3A;
     margin:0;
 }
@@ -96,7 +100,7 @@ body {
 main{
     max-width: 100%;
     margin:0;
-    background-color: #FBF3E6;  /*MAKE THIS THE MAIN COLOUR WHEN FIGURE OUT HOW TO CHANGE SVG COLOUR*/
+    background-color: #FBF3E6;  
 }
 
 main img{
@@ -133,6 +137,14 @@ h3{
     text-align: center; 
 }
 
+p{
+    font-family: "Assistant", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-size: 20;
+    font-style: normal;
+    text-align: center; 
+}
 
 
 #MomentsGrid{
@@ -212,10 +224,8 @@ p{
 }
 
 
-
-
 footer {
-    color:white;
+    color: #b9e4f4;
     background-color: #172A3A;
 }
 
@@ -255,3 +265,90 @@ button{
     text-align: center;
     align-items: center;
 }
+
+
+#On-Site-Activities{
+    background-color: #D2C7B2;
+}
+
+
+
+
+#Booking-Information{
+    background-color: #b9e4f4;
+}
+
+#Booking-Information ul li{
+    list-style: circle;
+}
+
+
+/*-------------------CREATING A CAROUSEL--------------------*/
+.card-link{
+    max-width: 100%;
+}
+
+.card-wrapper {
+    max-width: 100%;
+    margin:0 1rem 1rem;
+    padding: 1rem 1rem;
+}
+
+.card-list .card-item {
+    list-style: none;
+}
+
+
+.card-list .card-item .card-link {
+    user-select: none;
+
+    display:block;
+    background:#ffff;
+    padding:1rem;
+    border-radius:2rem;
+    text-decoration: none;
+    border: 2px solid transparent;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.05);
+}
+
+
+.card-list .card-item .card-image {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card-list .card-item .badge {
+    color:#172A3A;
+    padding:8px 16px;
+    font-size:0.95rem;
+    font-weight: 500;
+    margin: 15px 0 18px;
+    background: #dde4ff;
+    width: fit-content;
+    border-radius: 50px;
+}
+
+
+.card-list .card-item .card-title {
+    font-size: 1.19rem;
+    color:#172A3A;
+}
+
+.card-list .card-link .card-button{
+    color:#172A3A;
+    border-radius: 50%;
+    margin:30px 0 5px;
+    background:none;
+    cursor:pointer;
+    border:2px solid black;
+    padding:0 0;
+    transform:rotate(-45deg);
+}
+
+.card-list .card-link:hover .card-button{
+    color:#fff;
+    background-color: #172A3A;
+
+}
+
