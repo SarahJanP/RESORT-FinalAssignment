@@ -1,7 +1,7 @@
-## ATTRIBUTIONS & CITATIONS
+# ATTRIBUTIONS & CITATIONS
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
-# IMAGES
+## IMAGES
 “Silhouette of Person Raising Its Hand” by Pixabay under pexels license: 
 https://www.pexels.com/photo/silhouette-of-person-raising-its-hand-268134/
 
@@ -34,7 +34,7 @@ https://www.pexels.com/photo/couple-sitting-on-grass-warming-up-4378999/
 https://unsplash.com/photos/a-scuba-diver-swims-over-a-colorful-coral-reef-_tDdlCJIwOA
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
-# CODE NOT CREATED BY ME
+## CODE NOT CREATED BY ME
 
 
 CAROUSEL.JS CODE SOURCED FROM: Swiper Script sourced from https://swiperjs.com/get-started

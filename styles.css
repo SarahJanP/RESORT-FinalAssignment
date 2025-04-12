@@ -4,26 +4,78 @@
     padding:0
  } 
 
-/* Consider the common elements that will exist across all your pages (such as the header and footer) 
-and build those elements first. It will then be much easier and quicker to add/change the unique content 
-on every page. All pages should look good and work well at browser widths between 320 and 3200px wide. It 
-will be up to you to decide where your specific design needs media queries (if at all). The site must follow
- follow these restrictions: Use the attached logo and favicon to follow the resort's branding. The logo can
-  be recoloured to any colour you need for your design The website should include the favicon for every page
-   of the website The client wants the weather in their location (Cancun, Mexico) to be displayed in the 
-   website's header. Each page should be no more than 1.8MB in filesize (including any fonts, external files
-    and media assets). You will need to optimize your media to meet this limit. */
+/* 
+All pages should look good and work well at browser widths between 320 and 3200px wide. 
+Use the attached logo and favicon to follow the resort's branding. 
+The logo can Be recoloured to any colour you need for your design The website should include the favicon for every page
+    of the website.
+The client wants the weather in their location (Cancun, Mexico) to be displayed in the website's header. 
+Each page should be no more than 1.8MB in filesize (including any fonts, external files and media assets). 
+    You will need to optimize your media to meet this limit. 
+*/
+
+/* --------------RESPONSIVE FONT SIZING WITH PROPER FONTS ---------*/
+h1 {
+    font-family: "Antic Didone", serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    text-align: center;
+    font-weight: 500;
+}
+
+h2 {
+    font-family: "Antic Didone", serif;
+    font-optical-sizing: auto;
+    font-size:clamp(1.75rem, 4vw, 3rem);
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+}
 
 
-    /* HEADER */
+h3{
+    font-family: "Assistant", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+    font-style: normal;
+    text-align: center; 
+}
 
-#overlap{
+p{
+    font-family: "Assistant", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+    font-style: normal;
+    text-align: center; 
+}
+
+
+
+
+figcaption {
+    font-family: "Assistant", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+    font-style: normal;
+    text-align: center; 
+}
+
+/*-----------END fonts-------------*/
+
+
+
+
+/* -----------HEADER styling----------- */
+
+#overlap{                   /*Logo overlap with hero background */
 display:grid;
 grid-template-columns: 1fr;
 justify-items: center;
 }
 
-#overlap > *{
+#overlap > *{               /* selects all children of overlap*/
     grid-column-start: 1;
     grid-row-start: 1;
     column-span: all;
@@ -35,7 +87,8 @@ justify-items: center;
 }
 
 #LOGO{ 
-    margin-top: 2rem;
+    width:15rem;
+    margin-top: 1rem;
 
 }
 
@@ -49,14 +102,10 @@ justify-items: center;
     margin:0;
 }
 
-hr{
-    border-width: 0.01rem;
-    max-width: 80%;
 
-}
+    /* ------NAV BAR------*/
 
-    /* NAV BAR */
-
+    /*NOTE TO SELF - May have to change nav bar back to UL for other media query sizes. */
 nav {
     background-color: #B9E4F4 ;
     margin:0 0;
@@ -86,15 +135,16 @@ nav {
     
 }
 
+/*--------------- END Header -----------------*/
 
 
-/*Header END*/
+
+
 body {
     background-color: #B398A5; /* MAKE THIS BACKGROUND COLOUR AFTER EVERYTHING WORKS #FBF3E6;*/
     color: #172A3A;
     margin:0;
 }
-
 
 
 main{
@@ -111,42 +161,6 @@ main img{
 }
 
 
-
-h1{
-    font-family: "Antic Didone", serif;
-    font-size: 32;
-    text-align: center;
-    font-weight: 500;
-}
-
-h2{
-    font-family: "Assistant", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-size: 22;
-    font-style: normal;
-    text-align: center;
-}
-
-h3{
-    font-family: "Assistant", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-size: 28;
-    font-style: normal;
-    text-align: center; 
-}
-
-p{
-    font-family: "Assistant", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-size: 20;
-    font-style: normal;
-    text-align: center; 
-}
-
-
 #MomentsGrid{
     display:grid;
     grid-template-columns: 1fr 1fr;
@@ -155,15 +169,14 @@ p{
 
 }
 
+hr{  /* The lil line divider thing between sections */
+    border-width: 0.01rem;
+    max-width: 80%;
 
+}
 
 /*-------------------------------------------------*/
 
-
-
-object{
-    color: black;
-}
 
 #MomentsGrid {
     display: grid;
@@ -198,15 +211,6 @@ object{
     align-items: center;
 }
 
-#Accomodations h2{
-    font-family: "Antic Didone", serif;
-    font-size: 16pt;
-    text-align: center;
-    font-weight: 500;
-
-}
-
-
 
 #Accomodations img{
     border: solid #E2C486 1rem;
@@ -214,14 +218,6 @@ object{
     max-width: 100%;
 }
 
-p{
-    font-family: "Assistant", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-size: 28;
-    font-style: normal;
-    text-align: center; 
-}
 
 
 footer {
@@ -235,24 +231,15 @@ button{
     border: none;
     border-radius: 10px;
     padding:0.6rem 0.3rem;
-    max-width: fit-content;
+    max-width: 20vw;  /*NOTE TO SELF: not totally responsive button sizing */
 }
 
-.button-wrapper{
+.button-wrapper{   /*Annoying cuz in ordre to center buttons need div styling*/
     display:flex;
     justify-content: center;
+    max-width: 20%;
 }
 
-
-#testimonials h1{
-    font-size:24pt;
-}
-#testimonials p {
-    align-items: center;
-    max-width: 70%;
-    text-align: center;
-    font-size: 16pt
-}
 
 .Review {
     display:flex;
@@ -267,11 +254,24 @@ button{
 }
 
 
+
+
+
+
+
+
+/*-----------------------------------------------------ACTIVITIES PAGE STYLING-------------------------------------------------*/
+
+
+
+
+
+
+
+
 #On-Site-Activities{
     background-color: #D2C7B2;
 }
-
-
 
 
 #Booking-Information{
