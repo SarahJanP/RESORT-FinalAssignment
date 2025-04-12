@@ -380,6 +380,20 @@ button{
 }
 
 
+
+
+
+/* DINING PAGE STYLING*/
+
+.Restaurant-Info {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+
+
+
 /*------------MEDIA QUERIES---------------*/
 
 @media screen and (max-width:550px){    /* Changes the 2x2 photo grid to a one column layout for x-small screen sizes. */
@@ -394,3 +408,4 @@ button{
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
+
