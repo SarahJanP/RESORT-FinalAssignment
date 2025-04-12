@@ -14,7 +14,7 @@ Each page should be no more than 1.8MB in filesize (including any fonts, externa
     You will need to optimize your media to meet this limit. 
 */
 
-/* --------------RESPONSIVE FONT SIZING WITH PROPER FONTS ---------*/
+/* -------------- DEFAULT STYLING FOR ALL PAGES  ---------*/
 h1 {
     font-family: "Antic Didone", serif;
     font-size: clamp(2rem, 5vw, 3.5rem);
@@ -51,6 +51,14 @@ p{
 }
 
 
+li {
+    font-family: "Assistant", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+    font-style: normal;
+    text-align: center; 
+}
 
 
 figcaption {
@@ -61,6 +69,14 @@ figcaption {
     font-style: normal;
     text-align: center; 
 }
+
+img{
+    display:block;
+    border-radius: 10px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
 
 /*-----------END fonts-------------*/
 
@@ -144,6 +160,7 @@ body {
     background-color: #B398A5; /* MAKE THIS BACKGROUND COLOUR AFTER EVERYTHING WORKS #FBF3E6;*/
     color: #172A3A;
     margin:0;
+    align-content: center;
 }
 
 
@@ -157,7 +174,7 @@ main img{
     display:block;
     border-radius: 10px;
     max-width: 90%;
-    justify-self: center;
+    margin: 0 auto;
 }
 
 
@@ -172,6 +189,7 @@ main img{
 hr{  /* The lil line divider thing between sections */
     border-width: 0.01rem;
     max-width: 80%;
+        margin: 0 auto;
 
 }
 
@@ -217,7 +235,6 @@ hr{  /* The lil line divider thing between sections */
     border-radius: 20px;
     max-width: 100%;
 }
-
 
 
 footer {
@@ -288,6 +305,15 @@ button{
     max-width: 100%;
 }
 
+.badge {
+    font-family: "Assistant", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+    font-style: normal;
+    text-align: center; 
+ }
+
 .card-wrapper {
     max-width: 100%;
     margin:0 1rem 1rem;
@@ -320,10 +346,9 @@ button{
 
 .card-list .card-item .badge {
     color:#172A3A;
-    padding:8px 16px;
-    font-size:0.95rem;
+    padding:8px 16px; /*NOTE TO SELF - MAKE RESPONSIVE*/
     font-weight: 500;
-    margin: 15px 0 18px;
+    margin: 15px 0 18px;/*NOTE TO SELF - MAKE RESPONSIVE*/
     background: #dde4ff;
     width: fit-content;
     border-radius: 50px;
@@ -331,14 +356,13 @@ button{
 
 
 .card-list .card-item .card-title {
-    font-size: 1.19rem;
     color:#172A3A;
 }
 
 .card-list .card-link .card-button{
     color:#172A3A;
     border-radius: 50%;
-    margin:30px 0 5px;
+    margin:30px 0 5px;/*NOTE TO SELF - MAKE RESPONSIVE*/
     background:none;
     cursor:pointer;
     border:2px solid black;
@@ -349,6 +373,24 @@ button{
 .card-list .card-link:hover .card-button{
     color:#fff;
     background-color: #172A3A;
-
 }
 
+.card-item .swiper-slide {
+    max-width: 100%;
+}
+
+
+/*------------MEDIA QUERIES---------------*/
+
+@media screen and (max-width:550px){    /* Changes the 2x2 photo grid to a one column layout for x-small screen sizes. */
+    #MomentsGrid{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media screen and (min-width:1001px){
+    #MomentsGrid{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
