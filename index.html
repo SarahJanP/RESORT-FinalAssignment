@@ -5,96 +5,122 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shangri-La Resort</title>
     <link rel="stylesheet" href="styles.css">
+
+    <!--Fonts-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap" rel="stylesheet">
+    <!-- END fonts -->
+
 </head>
 
 
 <body>
     <header>
-        <div id ="WeatherBar">        </div>
+        <div id ="WeatherBar">
+
+        <p id = "temperature"></p>    
+
+        </div>
         <div id=overlap>
             <img id ="herobanner" src="/media/mediaCROPPED/couple.jpg">
             <object id ="LOGO" data="logo.svg" type ="image/svg+xml" width="30%"></object>
         </div>
         <nav> 
-            <ul>
-                <li> <a href="guest-rooms.html">Rooms</a>  </li>
-                <li> <a href="activities-and-excursions.html">Activities</a> </li>
-                <li> <a href="dining.html">Dining</a> </li>
-                <li> <a href="spa.html">Spa</a> </li>
-                <li> <a href="testimonials.html">Testimonials</a></li>
-            </ul>
+            
+                <p class="NavButton"> <a href="guest-rooms.html">Rooms</a>  </p>
+                <p class="NavButton"> <a href="activities-and-excursions.html">Activities</a> </p>
+                <p class="NavButton"> <a href="dining.html">Dining</a> </p>
+                <p class="NavButton"> <a href="spa.html">Spa</a> </p>
+                <p class="NavButton"> <a href="testimonials.html">Testimonials</a></p>
+            
         </nav>
     </header>
 <!-- EXITING HEADER -->
 
     <main>
         <h1>Shangri La Beach Resort - Your Dream Getaway</h1>
-        <!-- Line Divider ENTER HERE -->
+
+
+        <hr>
 
         <h2> Indulge in luxury and breathtaking views, at Shangri La Beach Resort.</h2>
 
-        <img src ="/media/mediaCROPPED/sasha-kaunas-xEaAoizNFV8-unsplash.jpg" width="496">
-
-        <!-- Line Divider ENTER HERE -->
+        <img src ="/media/mediaCROPPED/sasha-kaunas-xEaAoizNFV8-unsplash.jpg">
+        
+        <br>
+        <hr>
 
         <h1>Experience Unforgettable Moments</h1>
-        <!-- Line Divider ENTER HERE -->
+
 
         <section id="MomentsGrid">
             <figure>
                 <h3>Infinity Pool</h3>
-                <img src ="/media/mediaCROPPED/sasha-kaunas-xEaAoizNFV8-unsplash.jpg" width="266px">
+                <img src ="/media/mediaCROPPED/sasha-kaunas-small.jpg">
                 <figcaption>Relax by our stunning oceanfront infinity pool</figcaption>
             </figure>
 
             <figure> 
                 <h3>Private Beach Access</h3>
-                <img src="/media/mediaCROPPED/beach-swing.jpg" width="266">
+                <img src="/media/mediaCROPPED/beach-swing.jpg">
                 <figcaption> Step onto our pristine, white-sand beach</figcaption>
             </figure>
 
             <figure>
                 <h3>Equisite Dining</h3>
-                <img src="/media/mediaCROPPED/pexels-christel-heimdal-jensen-628776.jpg" width="266px">
+                <img src="/media/mediaCROPPED/pexels-christel-heimdal-jensen-628776.jpg">
                 <figcaption>Savor culinary delights at our restaurants</figcaption>
             </figure>
 
             <figure>
                 <h3>World-Class Spa</h3>
-                <img src="/media/mediaCROPPED/pexels-olly-3757657.jpg" width="266px">
+                <img src="/media/mediaCROPPED/pexels-olly-3757657.jpg">
                 <figcaption>Rejuvinate your mind and body at our spa</figcaption>
             </figure>
         </section>
 
-        <!-- Line Divider ENTER HERE -->
+        <hr>
     </main>
 
     <section id="Accomodations">
 
         <h1>Our Luxurious Accomodations</h1>
 
-        <!-- Line Divider ENTER HERE -->
+        <hr>
 
         <h2>Ocean View Deluxe Room</h2>
         <p>Enjoy stunning ocean views from your very own private balcony.</p>
         <img src="/media/mediaCROPPED/edgar-chaparro-5Zznjje88bo-unsplash.jpg" width="471px">
-        <button id="OceanView-Button">View Details</button>
 
-        <!-- Line Divider ENTER HERE -->
+        <div class="button-wrapper">
+        <button id="OceanView-Button">View Details</button>
+        </div>
+
+        <hr>
          
         <h2>Beachfront Suite</h2>
         <p>Step directly onto the sand from your spacious and comforting suite</p>
         <img src="/media/mediaCROPPED/pexels-iamluisao-12652920.jpg" width="471px">
-        <button id="BeachFront-Button">View Details</button>
 
-        <!-- Line Divider ENTER HERE -->
+        <div class="button-wrapper">
+        <button id="BeachFront-Button">View Details</button>
+        </div>
+        <hr>
          
         <h2>Garden View Family Home</h2>
         <p>Perfect for families, with ample space and garden views</p>
         <img src="/media/mediaCROPPED/double.jpg" width="471px">
-        <button id="GardenFamily-Button">View Details</button>
 
-        <!-- Line Divider ENTER HERE -->
+        <div class="button-wrapper">
+        <button id="GardenFamily-Button">View Details</button>
+        </div>
+        <hr>
 
     </section>
 
@@ -114,13 +140,16 @@
             <p>- John B.</p>
 
         </div>
-
+        <div class="button-wrapper">
         <button id="Testimonials-Button">Read More Testimonials</button>
+        </div>
     </section>
 
 
     <footer>
         Sarah Parker | 000900287
     </footer>
+
+    <script src="./scripts.js"></script>
 </body>
 </html>
