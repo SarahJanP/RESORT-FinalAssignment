@@ -382,6 +382,39 @@ button{
 
 
 
+/*SPA*/
+
+#MassageSelector{
+    background-color: #172A3A;
+    color:white;
+    border-radius: 0.5rem;
+    font-family: "Assistant", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+    font-style: normal;
+    text-align: left; 
+    max-width: fit-content; 
+    justify-content: start;
+    
+}
+#MassageTitle{
+    justify-content: start;
+    align-items:flex-start;
+}
+
+
+
+#SelectorStyling{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+#MassageSelector option{
+    padding:10px;
+}
 
 /* DINING PAGE STYLING*/
 
