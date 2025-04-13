@@ -272,9 +272,26 @@ button{
 
 
 
+.ReviewCard{ 
+    display:flex;
+    flex-direction: column;
+    background-color: #E2C486;
+    padding: 1rem;
+    margin: 1rem auto; 
+    max-width: 80%;  
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
+}
 
+.ReviewNAME{
+    justify-content: left;
+    text-align: left;
+}
 
-
+#LeaveReview{
+    background-color: #B9E4F4;
+}
 
 
 /*-----------------------------------------------------ACTIVITIES PAGE STYLING-------------------------------------------------*/
