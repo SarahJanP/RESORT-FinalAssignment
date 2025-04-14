@@ -19,7 +19,12 @@ h1 {
     font-family: "Antic Didone", serif;
     font-size: clamp(2rem, 5vw, 3.5rem);
     text-align: center;
-    font-weight: 500;
+    font-weight: 600;
+    padding: 3rem 2rem;
+}
+
+#TITLE {
+    margin-top: 6rem;
 }
 
 h2 {
@@ -29,6 +34,10 @@ h2 {
     font-weight: 500;
     font-style: normal;
     text-align: center;
+    padding-top: 1.6rem;
+    padding-bottom:1.6rem;
+
+    margin: 2rem 0;
 }
 
 
@@ -39,6 +48,8 @@ h3{
     font-size: clamp(1.5rem, 3.5vw, 2.5rem);
     font-style: normal;
     text-align: center; 
+    padding-top: 1.1rem;
+    padding-bottom:1.1rem;
 }
 
 p{
@@ -48,6 +59,7 @@ p{
     font-size: clamp(1.1rem, 2.5vw, 1.6rem);
     font-style: normal;
     text-align: center; 
+    margin: 1.6rem;
 }
 
 
@@ -59,7 +71,12 @@ li {
     font-style: normal;
     text-align: center; 
 }
-
+figure{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 figcaption {
     font-family: "Assistant", sans-serif;
@@ -68,6 +85,9 @@ figcaption {
     font-size: clamp(1.1rem, 2.5vw, 1.6rem);
     font-style: normal;
     text-align: center; 
+    padding-top: 1.1rem;
+    padding-bottom:1.1rem;
+    max-width: 90%;
 }
 
 img{
@@ -75,6 +95,16 @@ img{
     border-radius: 10px;
     max-width: 90%;
     margin: 0 auto;
+
+}
+
+
+hr{  /* The lil line divider thing between sections */
+    border-width: 0.01rem;
+    max-width: 80%;
+        margin: 1rem auto;
+    
+
 }
 
 
@@ -119,10 +149,13 @@ justify-items: center;
 }
 
 
+
     /* ------NAV BAR------*/
 
     /*NOTE TO SELF - May have to change nav bar back to UL for other media query sizes. */
 nav {
+    display:flex;
+    flex-direction: column;
     background-color: #B9E4F4 ;
     margin:0 0;
 }
@@ -157,9 +190,10 @@ nav {
 
 
 body {
-    background-color: #B398A5; /* MAKE THIS BACKGROUND COLOUR AFTER EVERYTHING WORKS #FBF3E6;*/
+    background-color: #FBF3E6; 
     color: #172A3A;
     margin:0;
+    padding:0;
     align-content: center;
 }
 
@@ -186,12 +220,7 @@ main img{
 
 }
 
-hr{  /* The lil line divider thing between sections */
-    border-width: 0.01rem;
-    max-width: 80%;
-        margin: 0 auto;
 
-}
 
 /*-------------------------------------------------*/
 
@@ -236,10 +265,25 @@ hr{  /* The lil line divider thing between sections */
     max-width: 100%;
 }
 
+#Accomodations hr{
+    border: solid #172A3A 0.01rem;
+    width: 80%;
+    margin: 3rem;
+}
+
+
+#testimonials {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 footer {
     color: #b9e4f4;
     background-color: #172A3A;
+    text-align: center;
+    padding: 1.3rem;
+    margin-top:4rem;
 }
 
 button{
@@ -248,13 +292,18 @@ button{
     border: none;
     border-radius: 10px;
     padding:0.6rem 0.3rem;
-    max-width: 20vw;  /*NOTE TO SELF: not totally responsive button sizing */
+    max-width:fit-content;  /*NOTE TO SELF: not totally responsive button sizing */
 }
 
 .button-wrapper{   /*Annoying cuz in ordre to center buttons need div styling*/
     display:flex;
     justify-content: center;
-    max-width: 20%;
+    width: 100%;
+    padding:1rem;
+}
+
+#test-button-wrapper{
+    padding:1rem;
 }
 
 
@@ -436,13 +485,72 @@ button{
 
 /*------------MEDIA QUERIES---------------*/
 
-@media screen and (max-width:550px){    /* Changes the 2x2 photo grid to a one column layout for x-small screen sizes. */
+
+
+/*-------------- MOBILE --------------*/
+@media screen and (max-width:768px){    /* Changes the 2x2 photo grid to a one column layout for x-small screen sizes. */
     #MomentsGrid{
         grid-template-columns: 1fr;
     }
 }
 
+/*-------------- TABLET --------------*/
+@media screen and (min-width:769px) and (max-width:1000px){
 
+    nav {
+        flex-direction: row;
+    }
+
+    #Accomodations{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+    }
+
+    #Accomodations h1{
+        grid-column: 1 / span 2;
+    }
+
+    #Accomodations h2{
+        grid-column: 1;
+    }
+    #Accomodations p{
+        grid-column-start: 1;
+    }
+
+    #Accomodations hr{
+        border: solid #172A3A 0.1rem;
+        grid-column: 1 / span 2;
+        margin: 0 auto;
+        width: 80%
+    }
+
+    #Accomodations img{
+        grid-column-start: 2;
+        max-width: 100%;
+    }
+
+    .button-wrapper{
+        grid-column: 1;
+    }
+
+    #testimonials {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+
+    }
+    #testimonials h1 {
+        grid-column: 1 / span 2;
+    }
+
+    #test-button-wrapper{
+        grid-column: 1 / span 2;
+        display:flex;
+        justify-content: center;
+    }
+}
+
+/*-------------- DESKTOP --------------*/
 @media screen and (min-width:1001px){
     #MomentsGrid{
         grid-template-columns: 1fr 1fr 1fr 1fr;
