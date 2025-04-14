@@ -16,11 +16,13 @@ Each page should be no more than 1.8MB in filesize (including any fonts, externa
 
 /* -------------- DEFAULT STYLING FOR ALL PAGES  ---------*/
 h1 {
+    font-optical-sizing: auto;
     font-family: "Antic Didone", serif;
     font-size: clamp(2rem, 5vw, 3.5rem);
     text-align: center;
-    font-weight: 600;
-    padding: 3rem 2rem;
+    font-weight: 500;
+    padding-top: clamp(1rem, 1.5rem, 2rem);
+    padding-bottom: clamp(1rem, 2rem, 3rem);
 }
 
 #TITLE {
@@ -34,8 +36,8 @@ h2 {
     font-weight: 500;
     font-style: normal;
     text-align: center;
-    padding-top: 1.6rem;
-    padding-bottom:1.6rem;
+    padding-top: clamp(0.4rem, 1rem, 2rem);
+    padding-bottom: clamp(0.4rem, 1rem, 2rem);
 
     margin: 2rem 0;
 }
@@ -101,8 +103,9 @@ img{
 
 hr{  /* The lil line divider thing between sections */
     border-width: 0.01rem;
+    border-color: #172A3A;
     max-width: 80%;
-        margin: 1rem auto;
+        margin: 0.5rem auto;
     
 
 }
@@ -121,7 +124,7 @@ grid-template-columns: 1fr;
 justify-items: center;
 }
 
-#overlap > *{               /* selects all children of overlap*/
+#overlap > *{               /* the * selects all children of overlap*/
     grid-column-start: 1;
     grid-row-start: 1;
     column-span: all;
@@ -189,6 +192,9 @@ nav {
 
 
 
+
+
+
 body {
     background-color: #FBF3E6; 
     color: #172A3A;
@@ -210,6 +216,8 @@ main img{
     max-width: 90%;
     margin: 0 auto;
 }
+
+
 
 
 #MomentsGrid{
@@ -284,16 +292,36 @@ footer {
     text-align: center;
     padding: 1.3rem;
     margin-top:4rem;
+
+    font-family: "Assistant", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-size: clamp(0.7rem, 2.5vw, 2rem);
+
+    margin: 1.6rem;
+
+
+
 }
 
-button{
-    color:#172A3A;
-    background-color: #B398A5; /*other colours: #5F96AA   #8F8389   */
+
+button {
+    font-size: clamp(1rem, 2.5vw, 1.5rem); 
+    padding: clamp(0.6rem, 1.2vw, 1rem) clamp(1rem, 2vw, 2rem); 
+    background-color: #B398A5;
+    color: #172A3A;
     border: none;
     border-radius: 10px;
-    padding:0.6rem 0.3rem;
-    max-width:fit-content;  /*NOTE TO SELF: not totally responsive button sizing */
+    max-width: fit-content;
+    cursor: pointer;
 }
+
+button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
+    box-shadow:#172A3A 0.2rem 0.2rem 0.4rem;
+}
+
+
+
 
 .button-wrapper{   /*Annoying cuz in ordre to center buttons need div styling*/
     display:flex;
@@ -318,6 +346,7 @@ button{
     text-align: center;
     align-items: center;
 }
+
 
 
 
@@ -378,7 +407,7 @@ button{
     font-size: clamp(1.1rem, 2.5vw, 1.6rem);
     font-style: normal;
     text-align: center; 
- }
+}
 
 .card-wrapper {
     max-width: 100%;
@@ -483,62 +512,38 @@ button{
 
 
 
-/*------------MEDIA QUERIES---------------*/
+/*---------------------------------------MEDIA QUERIES-------------------------------*/
 
 
 
-/*-------------- MOBILE --------------*/
-@media screen and (max-width:768px){    /* Changes the 2x2 photo grid to a one column layout for x-small screen sizes. */
+/*------------------------------------ MOBILE --------------*/
+@media screen and (max-width:768px){   
     #MomentsGrid{
         grid-template-columns: 1fr;
     }
+
+    .Review-DesktopOnly {
+        display:none;
+    }
 }
 
-/*-------------- TABLET --------------*/
+/*------------------------------------ TABLET --------------*/
 @media screen and (min-width:769px) and (max-width:1000px){
 
     nav {
         flex-direction: row;
     }
 
-    #Accomodations{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        justify-content: center;
+    .Review-DesktopOnly {
+        display:none;
     }
-
-    #Accomodations h1{
-        grid-column: 1 / span 2;
-    }
-
-    #Accomodations h2{
-        grid-column: 1;
-    }
-    #Accomodations p{
-        grid-column-start: 1;
-    }
-
-    #Accomodations hr{
-        border: solid #172A3A 0.1rem;
-        grid-column: 1 / span 2;
-        margin: 0 auto;
-        width: 80%
-    }
-
-    #Accomodations img{
-        grid-column-start: 2;
-        max-width: 100%;
-    }
-
-    .button-wrapper{
-        grid-column: 1;
-    }
+    
 
     #testimonials {
         display:grid;
         grid-template-columns: 1fr 1fr;
-
     }
+
     #testimonials h1 {
         grid-column: 1 / span 2;
     }
@@ -550,10 +555,123 @@ button{
     }
 }
 
-/*-------------- DESKTOP --------------*/
+/*---------------------------------------- DESKTOP -------------------------------------------------*/
 @media screen and (min-width:1001px){
+
+    nav {
+        flex-direction: row;
+    }
     #MomentsGrid{
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+
+    #HomeIntro {
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        gap: 2rem;
+        align-items: center; 
+        max-width: 100%;
+        margin: auto;
+        padding: 2rem;
+    }
+    
+    #HomeIntro h2:first-of-type {
+        grid-column: 1; 
+        grid-row: 1;
+    }
+    
+    #HomeIntro h2:last-of-type {
+        grid-column: 1; 
+        grid-row: 2;
+    }
+    
+    #HomeIntro img {
+        grid-column: 2; 
+        grid-row: 1 / span 2; 
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .Accomodations-Wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 20px;
+        align-items: center;
+        max-width: 1000px;
+        margin: auto;
+        padding: 2rem;
+    }
+    
+      /* H2 spans both columns and is centered */
+    .Accomodations-Wrapper h2 {
+        grid-column: 1 / -1;
+        text-align: center;
+    }
+    
+    /* Paragraph on the left column */
+    .Accomodations-Wrapper p {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    
+    /* Placing button in left column*/
+    .Accomodations-Wrapper .button-wrapper {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    
+    /* Let Image span vertically to grow/shrink */
+    .Accomodations-Wrapper img {
+        grid-column: 2;
+        grid-row: 2 / span 2;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+
+
+
+
+    /*===============================================*/
+    
+    #testimonials h1 {
+        grid-column: 1 / span 3;
+    }
+
+    .Review-DesktopOnly{
+        display:flex;
+        flex-direction: column;
+        background-color: #E2C486;
+        padding: 1rem;
+        margin: 1rem auto; 
+        max-width: 80%;  
+        border-radius: 10px;
+        text-align: center;
+        align-items: center;
+    }
+    #testimonials {
+        display: grid;
+        column-gap: 0.3rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1.5rem;
+        align-items: stretch; 
+    }
+    .Review,
+    .Review-DesktopOnly {
+        height: 100%; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+    }
+
+    #test-button-wrapper{
+        grid-column: 1 / span 3;
+        display:flex;
+        justify-content: center;
+    }
+
 }
 
