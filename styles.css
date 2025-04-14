@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding:0
- } 
+} 
 
 /* 
 All pages should look good and work well at browser widths between 320 and 3200px wide. 
@@ -18,10 +18,12 @@ Each page should be no more than 1.8MB in filesize (including any fonts, externa
 h1 {
     font-optical-sizing: auto;
     font-family: "Antic Didone", serif;
-    font-size: 2rem;
+    font-size: 2.2rem;
     text-align: center;
     font-weight: 500;
     margin:2rem 2rem;
+    padding-left:1.5rem;
+    padding-right:1.5rem;
 }
 
 #TITLE {
@@ -31,13 +33,14 @@ h1 {
 h2 {
     font-family: "Antic Didone", serif;
     font-optical-sizing: auto;
-    font-size:1.5rem;
+    font-size:1.9rem;
     font-weight: 500;
     font-style: normal;
     text-align: center;
     padding: clamp(0.4rem, 1rem, 2rem);
     padding-bottom: clamp(0.4rem, 1rem, 2rem);
-    padding-left: 2rem;
+    padding-left:2rem;
+    padding-right:2rem;
     margin: 2rem auto;
 }
 
@@ -63,6 +66,8 @@ p{
     font-style: normal;
     text-align: center; 
     margin: 1.6rem;
+    padding-left:1.5rem;
+    padding-right:1.5rem;
 }
 
 
@@ -73,6 +78,9 @@ li {
     font-size: 1rem;
     font-style: normal;
     text-align: center; 
+    padding-bottom: 1rem;
+    padding-left:1.5rem;
+    padding-right:1.5rem;
 }
 figure{
     display:flex;
@@ -98,6 +106,7 @@ img{
     border-radius: 10px;
     max-width: 90%;
     margin: 0 auto;
+
 
 }
 
@@ -134,6 +143,8 @@ justify-items: center;
 #herobanner{
     max-width: 100%;
     margin:0;
+    padding:0;
+    border-radius: 0;
 }
 
 #LOGO{ 
@@ -192,7 +203,9 @@ nav {
 
 
 
-
+figure ul{
+    text-align: left;
+}
 
 
 
@@ -232,7 +245,61 @@ main img{
 
 
 /*-------------------------------------------------*/
+/*SPA STYLING*/
+#MassageTitle{
+    font-size:3.1rem;
+}
 
+#JumpLinks{
+    display:grid;
+    background-color: #D2C7B2;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid #1f2117;
+}
+#JumpLinks p{
+    text-decoration: none;
+    padding:0.5rem 0;
+    margin: 0 0;
+    border: 1px solid #949485;
+}
+
+#SpaTimePrice{
+    display:grid;
+    grid-template-columns: 2;
+    font-size: 1rem;
+}
+
+.Time{
+text-align: left;
+}
+
+.Price{
+    text-align: right;
+}
+
+#JumpLinks p a{
+    text-decoration: none;
+    color:#172A3A;
+}
+
+#JumpLinks p a:hover{
+    color:#03233d;
+    text-decoration:underline;
+    background-color: #b5ab99;
+    padding:0.1rem;
+    border-radius: 10px;
+}
+
+#JumpLinks p:last-child{
+    grid-column: 1 / span 3;
+}
+
+
+
+/*END SPA STYLING*/
 
 #MomentsGrid {
     display: grid;
@@ -275,6 +342,14 @@ main img{
 }
 
 
+#GuestRoomsGrid{
+    background-color: #D2C7B2;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
 
 #testimonials {
     display:flex;
@@ -283,21 +358,53 @@ main img{
 }
 
 footer {
-    color: #b9e4f4;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    margin-top:3rem;
     background-color: #172A3A;
-    text-align: center;
-    padding: 1.3rem;
-    margin-top:4rem;
-
+    color: #b9e4f4;
+    padding: 1rem;
     font-family: "Assistant", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
     font-size: clamp(0.7rem, 2.5vw, 2rem);
-    margin-top: 1.6rem;
-
-
-
 }
+
+#Footer-Info {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    text-align: center;
+}
+
+#Return-To-Top-Link{
+    grid-column: 2;
+    grid-row:1;
+    background-color: #B9E4F4;
+    color:#172A3A;
+    padding: 0.3rem;
+    border-radius: 10px;
+    justify-self: end;
+}
+
+#Return-To-Top-Link:hover{
+    background-color:#172A3A;
+    border: 2px solid #b9e4f4;
+    color:#b9e4f4;
+}
+
+#Return-To-Top-Link a{
+    color:#172A3A;
+    text-decoration: none;
+}
+
+#Return-To-Top-Link a:hover {
+    text-decoration: underline;
+    color:#b9e4f4
+}
+
+
 
 
 button {
@@ -362,9 +469,7 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
     text-align: left;
 }
 
-#LeaveReview{
-    background-color: #B9E4F4;
-}
+
 
 
 /*-----------------------------------------------------ACTIVITIES PAGE STYLING-------------------------------------------------*/
@@ -388,6 +493,29 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
 #Booking-Information ul li{
     list-style: circle;
 }
+
+
+/*----------------------GUEST ROOMS STYLING -----------------------------------*/
+
+
+        .GuestRooms-Wrapper ul {
+        margin: 1;
+        padding-left: 2rem; 
+        text-align: left;
+        list-style-position: outside;
+        padding-bottom: 2rem;
+    }
+
+
+    .GuestRooms-Wrapper ul LI {
+        margin: 1;
+        padding-left: 0.1rem; 
+        text-align: left;
+        list-style-position: outside;
+
+    }
+
+
 
 
 /*-------------------CREATING A CAROUSEL--------------------*/
@@ -496,13 +624,33 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
 
 
 
-/* DINING PAGE STYLING*/
+/*===================== DINING PAGE STYLING===================*/
+
+
 
 .Restaurant-Info {
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    background-color: #9C9393;
 }
 
+.Restaurant-Info li{
+    list-style: none;
+}
+
+.Restaurant-Info h3 {
+    text-align: center;
+    border-bottom: 2px solid #172A3A;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    min-height: 3.5rem; /* or whatever value ensures uniform height */
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
 
 
 
@@ -520,6 +668,27 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
     .Review-DesktopOnly {
         display:none;
     }
+    .GuestRooms-Wrapper h2{
+        font-size: 2rem;
+    }
+
+    .GuestRooms-Wrapper ul {
+        margin: 1;
+        padding-left: 2rem; /* this creates space for bullets + gap from edge */
+        text-align: left;
+        list-style-position: outside;
+        padding-bottom: 2rem;
+    }
+
+
+    .GuestRooms-Wrapper ul li {
+        text-align: left;
+        padding-top:0.4rem;
+    }
+
+    .GuestRooms-Wrapper figcaption{
+        font-size: 1.16rem;
+    }
 }
 
 /*------------------------------------ TABLET --------------*/
@@ -532,6 +701,7 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
     h2{
         font-size: 2rem;
         margin:0;
+        padding:2rem 4rem 2rem 4rem;
     }
 
     h3{
@@ -590,10 +760,69 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
         font-size: 1rem;
     }
 
+    #GuestRoomsGrid.GuestRooms-Wrapper h2{
+        font-size: 1rem;
+    }
+
+    .GuestRooms-Wrapper figure {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    }
+
+    .GuestRooms-Wrapper figure{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 20px;
+        align-items: center;
+        max-width: 1000px;
+        margin: auto;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+      /* H2 spans both columns and is centered */
+    .GuestRooms-Wrapper h2 {
+        grid-column: 1 / -1;
+        text-align: center;
+    }
+    
+    /* Paragraph on the left column */
+    .GuestRooms-Wrapper figcaption {
+        grid-column: 1 / span 2;
+        grid-row: 1;
+    }
+
+
+        .GuestRooms-Wrapper ul {
+        margin: 1;
+        padding-left: 2rem; /* this creates space for bullets + gap from edge */
+        text-align: left;
+        list-style-position: outside;
+        padding-bottom: 2rem;
+    }
+
+
+    .GuestRooms-Wrapper ul li {
+        text-align: left;
+        padding-top:0.4rem;
+    }
+
+    
+    /* Let Image span vertically to grow/shrink */
+    .GuestRooms-Wrapper figure img {
+        grid-column: 2;
+        grid-row: 2 / span 2;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        margin-bottom: 3rem;
+    }
+
 
 }
 
-/*---------------------------------------- DESKTOP -------------------------------------------------*/
+/*---------DESKTOP---------------DESKTOP---------------- DESKTOP -------------------------------------------------*/
 @media screen and (min-width:1001px){
 
     h1{
@@ -638,11 +867,49 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
 
     } */
 
-
-
     nav {
         flex-direction: row;
     }
+        /*==================== H0ME PAGE STYLE ========================*/
+    
+        #testimonials h1 {
+            grid-column: 1 / span 3;
+        }
+    
+        .Review-DesktopOnly{
+            display:flex;
+            flex-direction: column;
+            background-color: #E2C486;
+            padding: 1rem;
+            margin: 1rem auto; 
+            max-width: 80%;  
+            border-radius: 10px;
+            text-align: center;
+            align-items: center;
+        }
+        #testimonials {
+            display: grid;
+            column-gap: 0.3rem;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1.5rem;
+            align-items: stretch; 
+        }
+        .Review,
+        .Review-DesktopOnly {
+            height: 100%; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center; 
+        }
+    
+        #test-button-wrapper{
+            grid-column: 1 / span 3;
+            display:flex;
+            justify-content: center;
+        }
+
+
+
     #MomentsGrid{
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
@@ -675,7 +942,7 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
         object-fit: cover;
     }
 
-    .Accomodations-Wrapper {
+    .Accomodations-Wrapper{
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto auto auto;
@@ -685,26 +952,27 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
         margin: auto;
         padding: 2rem;
     }
+
     
-      /* H2 spans both columns and is centered */
+
     .Accomodations-Wrapper h2 {
         grid-column: 1 / -1;
         text-align: center;
     }
     
-    /* Paragraph on the left column */
+
     .Accomodations-Wrapper p {
         grid-column: 1;
         grid-row: 2;
     }
     
-    /* Placing button in left column*/
+
     .Accomodations-Wrapper .button-wrapper {
         grid-column: 1;
         grid-row: 3;
     }
     
-    /* Let Image span vertically to grow/shrink */
+
     .Accomodations-Wrapper img {
         grid-column: 2;
         grid-row: 2 / span 2;
@@ -712,48 +980,85 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
         height: auto;
         object-fit: cover;
     }
+/*========END============ H0ME PAGE STYLE ========================*/
 
-
-
-
-
-    /*===============================================*/
-    
-    #testimonials h1 {
-        grid-column: 1 / span 3;
+/*----------------------GUEST-ROOM STYLING-----------------------*/
+    #GuestRoomsGrid.GuestRooms-Wrapper h2{
+        font-size: 1rem;
     }
 
-    .Review-DesktopOnly{
-        display:flex;
-        flex-direction: column;
-        background-color: #E2C486;
-        padding: 1rem;
-        margin: 1rem auto; 
-        max-width: 80%;  
-        border-radius: 10px;
-        text-align: center;
-        align-items: center;
+    .GuestRooms-Wrapper figure {
+    padding-left: 2rem;
+    padding-right: 2rem;
     }
-    #testimonials {
+
+    .GuestRooms-Wrapper figure{
         display: grid;
-        column-gap: 0.3rem;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 1.5rem;
-        align-items: stretch; 
-    }
-    .Review,
-    .Review-DesktopOnly {
-        height: 100%; 
-        display: flex;
-        flex-direction: column;
-        justify-content: center; 
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 20px;
+        align-items: center;
+        max-width: 1000px; /*NOTE TO SELF FIX THIS */
+        margin: auto;
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 
-    #test-button-wrapper{
-        grid-column: 1 / span 3;
-        display:flex;
-        justify-content: center;
+      /* H2 spans both columns and is centered */
+    .GuestRooms-Wrapper h2 {
+        grid-column: 1 / -1;
+        text-align: center;
     }
+    
+    /* Paragraph on the left column */
+    .GuestRooms-Wrapper figcaption {
+        grid-column: 1 / span 2;
+        grid-row: 1;
+    }
+
+
+        .GuestRooms-Wrapper ul {
+        margin: 1;
+        padding-left: 2rem; /* this creates space for bullets + gap from edge */
+        text-align: left;
+        list-style-position: outside;
+        padding-bottom: 2rem;
+    }
+
+
+    .GuestRooms-Wrapper ul li {
+        text-align: left;
+        padding-top:0.4rem;
+    }
+
+    
+    /* Let Image span vertically to grow/shrink */
+    .GuestRooms-Wrapper figure img {
+        grid-column: 2;
+        grid-row: 2 / span 2;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        margin-bottom: 3rem;
+    }
+
+/*--------------END--------GUEST-ROOM STYLING-----------------------*/
+
+
+
+
+/*========ADVENTURES AND EXCURSIONS*/
+.card-wrapper {
+    max-width: 50%;
+    Height:100%;
+    margin:0;
+    padding: 1rem 1rem;
+}
+
+.card-list .card-item {
+    list-style: none;
+}
+
 
 }
 
