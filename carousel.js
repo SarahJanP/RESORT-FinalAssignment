@@ -16,4 +16,4 @@ new Swiper('.card-wrapper', {
       prevEl: '.swiper-button-prev',
     },
   
-   });
+  });

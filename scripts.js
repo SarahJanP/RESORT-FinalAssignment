@@ -10,6 +10,10 @@ fetch("https://api.openweathermap.org/data/2.5/weather?q=Cancun&appid=a33479c7be
 
 });
 
+//
+
+
+//BUTTON FUNCTIONALITIES
 const OceanViewButton = document.getElementById("OceanView-Button");
 const BeachFrontButton = document.getElementById("BeachFront-Button");
 const GardenFamilyButton = document.getElementById("GardenFamily-Button");
@@ -48,30 +52,3 @@ BeachFrontButton.addEventListener("click",function(){
 GardenFamilyButton.addEventListener("click", function(){
     goToGardenFamily();
 })
-
-
-/* <div class="button-wrapper">
-<button id="OceanView-Button">View Details</button> <!-- NOTE TO SELF : ATTACH BUTTONS TO THE ROOMS PAGE AT THE RIGHT SPOT-->
-</div>
-
-<hr>
-
-<h2>Beachfront Suite</h2>
-<p>Step directly onto the sand from your spacious and comforting suite</p>
-<img src="/home-media/pexels-iamluisao-12652920.jpg" width="471px">
-
-<div class="button-wrapper">
-<button id="BeachFront-Button">View Details</button><!-- NOTE TO SELF : ATTACH BUTTONS TO THE ROOMS PAGE AT THE RIGHT SPOT-->
-</div>
-<hr>
-
-<h2>Garden View Family Home</h2>
-<p>Perfect for families, with ample space and garden views</p>
-<img src="/home-media/double.jpg" width="471px">
-
-<div class="button-wrapper">
-<button id="GardenFamily-Button">View Details</button><!-- NOTE TO SELF : ATTACH BUTTONS TO THE ROOMS PAGE AT THE RIGHT SPOT-->
-</div>
-<hr>
-
-</section> */
