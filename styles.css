@@ -49,7 +49,7 @@ h3{
     font-family: "Assistant", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-style: normal;
     text-align: center; 
     padding-top: 1.5rem;
@@ -62,7 +62,7 @@ p{
     font-family: "Assistant", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-style: normal;
     text-align: center; 
     margin: 1.6rem;
@@ -75,7 +75,7 @@ li {
     font-family: "Assistant", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-style: normal;
     text-align: center; 
     padding-bottom: 1rem;
@@ -93,7 +93,7 @@ figcaption {
     font-family: "Assistant", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-style: normal;
     text-align: center; 
     padding-top: 1.1rem;
@@ -132,6 +132,11 @@ hr{  /* The lil line divider thing between sections */
 display:grid;
 grid-template-columns: 1fr;
 justify-items: center;
+
+}
+
+#overlap a{
+    width:50%;
 }
 
 #overlap > *{               /* the * selects all children of overlap*/
@@ -147,11 +152,7 @@ justify-items: center;
     border-radius: 0;
 }
 
-#LOGO{ 
-    width:15rem;
-    margin-top: 1rem;
 
-}
 
 #WeatherBar{
     background-color: #172A3A;
@@ -250,6 +251,11 @@ main img{
     font-size:3.1rem;
 }
 
+#Massages h3,
+#Massages p{
+    text-align: left;
+}
+
 #JumpLinks{
     display:grid;
     background-color: #D2C7B2;
@@ -266,7 +272,18 @@ main img{
     border: 1px solid #949485;
 }
 
-#SpaTimePrice{
+.SpaCard{
+    padding-bottom: 4rem;
+}
+
+.SpaTimePrice{
+    border-top: solid #7f8b99 3px;
+    box-shadow:#172A3A 0.2rem 0.2rem 0.4rem;
+}
+
+.SpaTimePrice{
+    padding-right:3rem;
+    padding-left:3rem;
     display:grid;
     grid-template-columns: 2;
     font-size: 1rem;
@@ -278,6 +295,7 @@ text-align: left;
 
 .Price{
     text-align: right;
+    align-self:flex-end;
 }
 
 #JumpLinks p a{
@@ -344,8 +362,8 @@ text-align: left;
 
 #GuestRoomsGrid{
     background-color: #D2C7B2;
-    display:flex;
-    flex-direction: column;
+    display:grid;
+    grid-template-columns: 1fr;
     align-items: center;
 }
 
@@ -606,18 +624,18 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
     background-color:#D2C7B2;
 }
 
-#SpaTimePrice{
+.SpaTimePrice{
     display:grid;
     grid-template-columns: 1fr 1fr;
     color:white;    
     background-color:#5B646E
 }
 
-#SpaTimePrice#Time{ /*NOTE TO SELF: Figure out how to justify left / right*/
+.SpaTimePrice#Time{ /*NOTE TO SELF: Figure out how to justify left / right*/
 
 }
 
-#SpaTimePrice#Price{
+.SpaTimePrice#Price{
 
 }
 
@@ -657,12 +675,41 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
 
 /*---------------------------------------MEDIA QUERIES-------------------------------*/
 
+@media screen and (max-width:401px){
+    #Footer-Info{
+        grid-column: 1;
+    }
+    #LOGO{ 
+        width: clamp(10rem, 15rem, 20rem);
+        margin-top: 1rem;
+    
+    }
+}
 
+@media screen and (max-width:660px){
+    
+    #overlap a img{
+        max-width: 60%;
+    }
+
+    #LOGO{ 
+        width: 100%;
+        margin:0;
+        justify-self: center;
+        margin-top: clamp(2rem, 3rem, 5rem);
+    }
+    
+}
 
 /*------------------------------------ MOBILE --------------*/
 @media screen and (max-width:768px){   
     #MomentsGrid{
         grid-template-columns: 1fr;
+    }
+    #LOGO{ 
+        width: clamp(10rem, 15rem, 20rem);
+        margin-top: 1rem;
+    
     }
 
     .Review-DesktopOnly {
@@ -689,32 +736,68 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
     .GuestRooms-Wrapper figcaption{
         font-size: 1.16rem;
     }
+
+    .Review p{
+        margin:0;
+        margin-bottom: 1rem;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*------------------------------------ TABLET --------------*/
 @media screen and (min-width:769px) and (max-width:1000px){
 
     h1{
-        font-size: 2.3rem;
+        font-size: clamp(1.8rem, 2.5rem, 3.5rem);
+        
+    }
+
+    #LOGO{ 
+        width: clamp(12rem, 17rem, 25rem);
+        margin-top: 1rem;
+    
+    }
+
+    #TITLE{
+        margin-top: clamp(4rem, 6rem, 8rem);
+        margin-bottom: clamp(4rem, 6rem, 6rem);
     }
 
     h2{
-        font-size: 2rem;
-        margin:0;
+        font-size: clamp(1.75rem, 2.2rem, 3rem);
+        margin-top: clamp(1.5rem, 2rem, 3rem);
+        margin-bottom: clamp(1rem, 1.5rem, 2rem);
         padding:2rem 4rem 2rem 4rem;
     }
 
     h3{
-        font-size: 1.5rem;
+        font-size: clamp(1.3rem, 1.8rem, 2.2rem);
         margin:0;
     }
 
     p{
-        font-size: 1.4rem;
+        font-size: clamp(1rem, 1.5rem, 2rem);
     }
 
     figcaption{
-        font-size: 1.2rem;
+        font-size: clamp(1rem, 1.5rem, 2rem);
         margin:0;
     }
     #testimonials p{
@@ -730,7 +813,17 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
         border-radius: 2rem;
     }
 
+    #MomentsGrid{
+        max-width: 90%;
+        justify-self: center;
+    }
 
+
+    .attribution p{
+        justify-self: right;
+        align-items: flex-end;
+        color:#969b82;
+    }
 
     nav {
         flex-direction: row;
@@ -758,6 +851,13 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
 
     footer{
         font-size: 1rem;
+    }
+
+    #GuestRoomsGrid{
+        background-color: #D2C7B2;
+        display:grid;
+        grid-template-columns: 1fr;
+        align-items: center;
     }
 
     #GuestRoomsGrid.GuestRooms-Wrapper h2{
@@ -822,29 +922,66 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
 
 }
 
-/*---------DESKTOP---------------DESKTOP---------------- DESKTOP -------------------------------------------------*/
-@media screen and (min-width:1001px){
 
-    h1{
-        font-size: 2.5rem;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------DESKTOP---------------DESKTOP---------------- DESKTOP -------------------------------------------------*/
+@media screen and (min-width:1001px) and (max-width:1599px){
+
+    h1{             /*min preferred max */
+        font-size: clamp(2.5rem, 3.3rem, 5rem );
+        margin-top: clamp(4rem, 6rem, 8rem);
+        margin-bottom: clamp(4rem, 6rem, 8rem);
+    }
+
+    #overlap a img{
+        max-width: 60%;
+    }
+
+    #LOGO{ 
+        width: 100%;
+        margin:0;
+        justify-self: center;
+        margin-top: clamp(2rem, 3rem, 5rem);
+    }
+
+    #TITLE{
+
+        margin-top: clamp(4rem, 6rem, 8rem);
+        margin-bottom: clamp(4rem, 6rem, 8rem);
     }
 
     h2{
-        font-size: 2.1rem;
+        font-size: clamp(2rem, 2.5rem, 5rem );
         margin:0;
     }
 
     h3{
-        font-size: 1.3rem;
+        font-size: clamp(1rem, 1.7rem, 3rem );
         margin:0;
     }
 
     p{
-        font-size: 1.4rem;
+        font-size: clamp(1rem, 1.5rem, 2rem );
     }
 
     figcaption{
-        font-size: 1.1rem;
+        font-size: 1.4rem;
         margin:0;
     }
     #testimonials p{
@@ -907,11 +1044,17 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
             display:flex;
             justify-content: center;
         }
-
+        .Review-DesktopOnly p,
+        .Review p{
+            margin:0;
+            padding-bottom: 1rem;
+        }
 
 
     #MomentsGrid{
         grid-template-columns: 1fr 1fr 1fr 1fr;
+        max-width: 92%;
+        justify-self: center;
     }
 
     #HomeIntro {
@@ -932,6 +1075,8 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
     #HomeIntro h3{
         grid-column: 1; 
         grid-row: 2;
+        align-self: start;
+        padding-top: 0;
     }
     
     #HomeIntro img {
@@ -940,6 +1085,8 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
         width: 100%;
         height: auto;
         object-fit: cover;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
     }
 
     .Accomodations-Wrapper{
@@ -948,7 +1095,6 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
         grid-template-rows: auto auto auto;
         gap: 20px;
         align-items: center;
-        max-width: 1000px;
         margin: auto;
         padding: 2rem;
     }
@@ -956,7 +1102,9 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
     
 
     .Accomodations-Wrapper h2 {
-        grid-column: 1 / -1;
+        grid-column: 1 ;
+        grid-row:1;
+        margin-bottom: 1rem;
         text-align: center;
     }
     
@@ -964,6 +1112,7 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
     .Accomodations-Wrapper p {
         grid-column: 1;
         grid-row: 2;
+        
     }
     
 
@@ -975,10 +1124,11 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
 
     .Accomodations-Wrapper img {
         grid-column: 2;
-        grid-row: 2 / span 2;
+        grid-row: 1 / span 3;
         width: 100%;
         height: auto;
         object-fit: cover;
+        max-width: 1500px;
     }
 /*========END============ H0ME PAGE STYLE ========================*/
 
@@ -1060,5 +1210,453 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
 }
 
 
+
+
+
+
+/*SPAA*/
+
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=======EXTRA LARGE SCREENS===========================EXTRA LARGE SCREENS===========================EXTRA LARGE SCREENS==========================EXTRA LARGE SCREENS===================*/
+/*======================================================================================================================================================================================*/
+@media screen and (min-width:1600px) and (max-width:1999px){
+
+    
+    #overlap a img{
+        max-width: 60%;
+    }
+
+    #LOGO{ 
+        width: 100%;
+        margin:0;
+        justify-self: center;
+        margin-top: clamp(2rem, 3rem, 5rem);
+    }
+    
+    hr{
+        grid-column: 1 / span 2;
+        width:100%;
+        margin: 0 auto;
+    }
+
+    h1{             /*min preferred max */
+        font-size: clamp(2.5rem, 3rem, 5rem );
+        margin-top: clamp(4rem, 6rem, 8rem);
+        margin-bottom: clamp(4rem, 6rem, 8rem);
+    }
+
+    #TITLE{
+        margin-top: clamp(4rem, 6rem, 8rem);
+        margin-bottom: clamp(4rem, 6rem, 8rem);
+    }
+
+    h2{
+        font-size: clamp(2rem, 3rem, 4rem );
+        margin-top: clamp(2rem, 3rem, 4rem);
+        margin-bottom: clamp(2rem, 3rem, 4rem);
+    }
+
+    h3{
+        font-size:  clamp(1.8rem, 2rem, 3rem );
+        margin:0;
+    }
+
+    p{
+        font-size: clamp(1rem, 1.7rem, 3rem );
+    }
+
+    li{
+        font-size: clamp(1rem, 1.4rem, 2rem );
+    }
+
+
+    p.NavButton{
+        font-size: clamp(1.5rem, 2rem, 2.5rem ); ;
+    }
+    figcaption{
+        font-size: clamp(1rem, 1.7rem, 3rem );
+        margin:0;
+    }
+    #testimonials p{
+        font-size:1.2rem;
+    }
+
+    button{
+        font-size: 1.3rem;
+    }
+
+    footer{
+        font-size: 1rem;
+    }
+
+    .Review-DesktopOnly p,
+    .Review p{
+        margin:0;
+        margin-bottom: 1rem;
+        font-size: clamp(1.5rem, 1.8rem, 3rem );
+        
+    }
+    #HomeIntro {
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        gap: 2rem;
+        align-items: center; 
+        max-width: 100%;
+        margin: auto;
+        padding: 2rem;
+    }
+    
+    #HomeIntro h2 {
+        grid-column: 1; 
+        grid-row: 1;
+    }
+    
+    #HomeIntro h3{
+        grid-column: 1; 
+        grid-row: 2;
+        align-self: start;
+        padding-top: 0;
+    }
+    
+    #HomeIntro img {
+        grid-column: 2; 
+        grid-row: 1 / span 2; 
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    nav {
+        flex-direction: row;
+    }
+        /*==================== H0ME PAGE STYLE ========================*/
+    
+        #testimonials h1 {
+            grid-column: 1 / span 3;
+            margin-top: 4rem;
+            margin-bottom: 2rem;
+        }
+    
+        .Review-DesktopOnly{
+            display:flex;
+            flex-direction: column;
+            background-color: #E2C486;
+            padding: 1rem;
+            margin: 1rem auto; 
+            max-width: 80%;  
+            border-radius: 10px;
+            text-align: center;
+            align-items: center;
+        }
+        #testimonials {
+            display: grid;
+            column-gap: 0.3rem;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1.5rem;
+            align-items: stretch; 
+        }
+        .Review,
+        .Review-DesktopOnly {
+            height: 100%; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center; 
+        }
+    
+        #test-button-wrapper{
+            grid-column: 1 / span 3;
+            display:flex;
+            justify-content: center;
+        }
+
+
+
+    #MomentsGrid{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+
+    .Accomodations-Wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 20px;
+        align-items: center;
+        margin: auto;
+        padding: 2rem;
+    }
+
+    
+
+    .Accomodations-Wrapper h2 {
+        grid-column: 1 ;
+        grid-row:1;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    
+
+    .Accomodations-Wrapper p {
+        grid-column: 1;
+        grid-row: 2;
+        
+    }
+    
+
+    .Accomodations-Wrapper .button-wrapper {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    
+
+    .Accomodations-Wrapper img {
+        grid-column: 2;
+        grid-row: 1 / span 3;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        max-width: 1500px;
+    }
+/*========END============ H0ME PAGE STYLE ========================*/
+
+/*----------------------GUEST-ROOM STYLING-----------------------*/
+    #GuestRooms-Wrapper{
+        max-width: 100%;
+    }
+
+#GuestRoomsGrid.GuestRooms-Wrapper h2{
+        font-size: 1rem;
+    }
+
+    .GuestRooms-Wrapper figure {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    }
+
+    .GuestRooms-Wrapper figure{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 20px;
+        align-items: center;
+        max-width: 1000px; /*NOTE TO SELF FIX THIS */
+        margin: auto;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+      /* H2 spans both columns and is centered */
+    .GuestRooms-Wrapper h2 {
+        grid-column: 1 / -1;
+        text-align: center;
+    }
+    
+    /* Paragraph on the left column */
+    .GuestRooms-Wrapper figcaption {
+        grid-column: 1 / span 2;
+        grid-row: 1;
+    }
+
+
+        .GuestRooms-Wrapper ul {
+        margin: 1;
+        padding-left: 2rem; /* this creates space for bullets + gap from edge */
+        text-align: left;
+        list-style-position: outside;
+        padding-bottom: 2rem;
+    }
+
+
+    .GuestRooms-Wrapper ul li {
+        text-align: left;
+        padding-top:0.4rem;
+    }
+
+    
+    /* Let Image span vertically to grow/shrink */
+    .GuestRooms-Wrapper figure img {
+        grid-column: 2;
+        grid-row: 2 / span 2;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        margin-bottom: 3rem;
+    }
+
+/*--------------END--------GUEST-ROOM STYLING-----------------------*/
+
+
+
+
+/*========ADVENTURES AND EXCURSIONS*/
+.card-wrapper {
+    max-width: 50%;
+    Height:100%;
+    margin:0;
+    padding: 1rem 1rem;
+}
+
+.card-list .card-item {
+    list-style: none;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:2000px){
+    
+    nav {
+        flex-direction: row;
+    }
+    h1{             /*min preferred max */
+        font-size: clamp(3rem, 4rem, 5rem );
+        margin-top: clamp(4rem, 6rem, 8rem);
+        margin-bottom: clamp(4rem, 6rem, 8rem);
+    }
+
+    #overlap a img{
+        max-width: 60%;
+    }
+
+    #LOGO{ 
+        width: 100%;
+        margin:0;
+        justify-self: center;
+        margin-top: clamp(2rem, 3rem, 5rem);
+    }
+
+    #TITLE{
+        margin-top: clamp(4rem, 6rem, 8rem);
+        margin-bottom: clamp(4rem, 6rem, 8rem);
+    }
+
+    h2{
+        font-size: clamp(3rem, 3.5rem, 4rem );
+        margin:0;
+    }
+
+    h3{
+        font-size: clamp(2rem, 2.65rem, 3.5rem );
+        margin:0;
+        margin-bottom: 3rem;
+    }
+
+        .NavButton a{
+        font-size: clamp(1.4rem, 2.5rem, 3rem ); ;
+    }
+
+    button{
+        font-size: clamp(1.2rem, 1.5rem, 1.8rem );
+    }
+
+    #HomeIntro h3{
+        max-width: 70%;
+        justify-self: center;
+    }
+
+    p{
+        font-size: clamp(1.8rem, 2rem, 2.4rem );
+    }
+
+    figcaption{
+        font-size: clamp(1.8rem, 2.1rem, 2.4rem );
+        margin:0;
+    }
+
+    li{
+        font-size: clamp(1.5rem, 1.77rem, 2.2rem );
+        margin:0;
+    }
+    #testimonials p{
+        font-size: clamp(1.8rem, 2rem, 2.4rem );
+    }
+
+    
+/*========ADVENTURES AND EXCURSIONS*/
+.card-wrapper {
+    max-width: 50%;
+    Height:100%;
+    margin:0;
+    padding: 1rem 1rem;
+}
+
+.card-list .card-item {
+    list-style: none;
+}
+
+
+    #GuestRoomsGrid{
+        background-color: #D2C7B2;
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+
+    .GuestRooms-Wrapper{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        height:100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    #GuestRoomsGrid .GuestRooms-Wrapper:last-child{
+        grid-column: 1 / span 2;
+    }
+
+
+}
