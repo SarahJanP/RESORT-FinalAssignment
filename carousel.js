@@ -4,6 +4,14 @@
 new Swiper('.card-wrapper', {
     loop: true,
     spaceBetween: 30,
+
+    slidesPerView: 1, //default slides
+
+    breakpoints: {
+      1001:{
+        slidesPerView:2
+      }
+    },
   
     // Pagination Bulelets 
     pagination: {
