@@ -89,10 +89,15 @@ figcaption {
 img{
     display:block;
     border-radius: 10px;
+    max-width: 1000px;
     max-width: 80%;
     margin: 0 auto;
 
 
+}
+
+#herobanner{
+    max-width: none;
 }
 
 
@@ -267,6 +272,14 @@ main img{
     padding-bottom: 4rem;
 }
 
+.SpaCard h3{
+    font-weight: bold;
+}
+
+#ManiPedi .TimePrice{
+    display:block;
+    justify-self: center;
+}
 
 
 .SpaTimePrice{
@@ -310,27 +323,10 @@ main img{
 }
 
 
-#Facials ul{
-margin:0;
-}
-
-ul.TimePrice{
-    text-align: left;
-    margin:0;
-}
-
-#Facials li{
-    justify-self: center;
-    align-self: center;
-
-    list-style: none;
-    font-size: 1.4rem;
-    padding-top: 1.5rem;
-}
-
-#Facials p{
-    text-align: left;
-    margin-top:0;
+#Facials{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #Facials hr{
@@ -338,18 +334,19 @@ ul.TimePrice{
 }
 
 
-#ManiPedi li{
-    margin-left: 2rem;
-    justify-self: left;
-    list-style: none;
-    font-size: 1.4rem;
+#BodyTreat{
+    display:grid;
+    grid-template-columns: 1fr;
 }
 
-#ManiPedi .TimePrice{
-    justify-self: left;
-    text-align:left;
-    padding-left: 4rem;
+#Enhancements{
+    text-align: center;
 }
+
+#Notes{
+    text-align: center;
+}
+
 #ManiPedi hr {
 width:100%
 }
@@ -537,8 +534,20 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
     background-color: #D2C7B2;
 }
 
+#On-Site-Activities ul{
+    margin: 0 3rem;
+    justify-self: center;
+}
+
+#On-Site-Activities li{
+    justify-self:center ;
+    margin: 0 2rem;
+}
+
 
 #Booking-Information{
+    display:flex;
+    flex-direction: column;
     background-color: #b7cbdb;
     padding:2rem 2rem 2rem 2rem;
 
@@ -546,6 +555,7 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
 
 #Booking-Information ul li{
     list-style: none;
+    justify-self: center;
 }
 
 
@@ -679,8 +689,10 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
     background-color: #9C9393;
 }
 
+
 .Restaurant-Info li{
     list-style: none;
+    justify-self: center;
 }
 
 .Restaurant-Info h3 {
@@ -1022,7 +1034,8 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
 
     h2{
         font-size: clamp(2rem, 2.5rem, 5rem );
-        margin:0;
+        margin: 3rem0;
+
     }
 
     h3{
@@ -1267,10 +1280,93 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
     max-width: 60%;
 }
 
-.SpaCard{
-    border: solid 2px #72767a;
-    
+
+#ManiPedi{
+    display: grid;
+    grid-template-columns: 1fr 0.6fr;
+    grid-template-rows: 0.3fr 1fr 1fr  1fr;
+ }
+
+ #ManiPedi h2{
+    grid-column: 1 / span 2;
+    padding: 1rem 0;
+    margin: 0;
 }
+
+ #ManiPedi img{
+    align-self: center;
+    grid-column: 1;
+    grid-row: 2 / span 4;
+ }
+
+
+
+.SpaCard{
+    
+    padding-bottom: 1rem;
+}
+
+#BodyTreat{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.3fr 0.8fr 0.8fr 0.8fr;
+}
+
+#BodyTreat h2{
+    grid-column: 1 / span 2;
+}
+
+#BodyTreat img{
+    grid-column: 1;
+    grid-row: 2 / span 3;
+    align-self: center;
+}
+
+#BodyTreat .SpaCard{
+    padding-bottom: 0;
+}
+
+#BodyTreat .SpaCard p,
+#BodyTreat .SpaCard h3{
+    margin:0;
+    padding:0;
+}
+
+.spaCard h3{
+    font-weight: normal;
+}
+
+#BodyTreat .spaCard p {
+    text-align: left;
+    align-self:flex-start;
+}
+
+hr{
+    margin: 1rem 0;
+    width:100%;
+}
+
+
+
+.ReviewCard{ 
+    display:flex;
+    flex-direction: column;
+    background-color: #E2C486;
+    padding: 3rem;
+    margin: 5rem auto; 
+    max-width: 60%;  
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.ReviewNAME{
+    justify-content: left;
+    text-align: left;
+}
+
+
+
 }
 
 
@@ -1575,7 +1671,6 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
 
 
 /*SPA*/
-/*SPAA*/
 #Massages{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1591,9 +1686,94 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
     max-width: 60%;
 }
 
+
+#ManiPedi{
+    display: grid;
+    grid-template-columns: 1fr 0.6fr;
+    grid-template-rows: 0.3fr 1fr 1fr  1fr;
+ }
+
+ #ManiPedi h2{
+    grid-column: 1 / span 2;
+    padding: 1rem 0;
+    margin: 0;
+}
+
+ #ManiPedi img{
+    align-self: center;
+    grid-column: 1;
+    grid-row: 2 / span 4;
+ }
+
+
+
 .SpaCard{
-    border: solid 2px #72767a;
     
+    padding-bottom: 1rem;
+}
+
+#BodyTreat{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.3fr 0.8fr 0.8fr 0.8fr;
+}
+
+#BodyTreat h2{
+    grid-column: 1 / span 2;
+}
+
+#BodyTreat img{
+    grid-column: 1;
+    grid-row: 2 / span 3;
+    align-self: center;
+}
+
+#BodyTreat .SpaCard{
+    padding-bottom: 0;
+}
+
+#BodyTreat .SpaCard p,
+#BodyTreat .SpaCard h3{
+    margin:0;
+    padding:0;
+}
+
+.spaCard h3{
+    font-weight: normal;
+}
+
+#BodyTreat .spaCard p {
+    text-align: left;
+    align-self:flex-start;
+}
+
+hr{
+    margin: 1rem 0;
+    width:100%;
+}
+
+
+
+
+/*TESTIMONIALS*/
+
+
+
+.ReviewCard{ 
+    display:flex;
+    flex-direction: column;
+    background-color: #E2C486;
+    padding: 3rem;
+    margin: 5rem auto; 
+    max-width: 60%;  
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.ReviewNAME{
+    justify-content: left;
+    text-align: left;
 }
 
 
