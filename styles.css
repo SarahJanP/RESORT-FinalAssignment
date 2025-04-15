@@ -505,11 +505,13 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
 
 
 #Booking-Information{
-    background-color: #b9e4f4;
+    background-color: #b7cbdb;
+    padding:2rem 2rem 2rem 2rem;
+
 }
 
 #Booking-Information ul li{
-    list-style: circle;
+    list-style: none;
 }
 
 
@@ -548,6 +550,7 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
     font-size: clamp(1.1rem, 2.5vw, 1.6rem);
     font-style: normal;
     text-align: center; 
+
 }
 
 .card-wrapper {
@@ -565,7 +568,7 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
     user-select: none;
 
     display:block;
-    background:#ffff;
+    background:#b7cbdb;
     padding:1rem;
     border-radius:2rem;
     text-decoration: none;
