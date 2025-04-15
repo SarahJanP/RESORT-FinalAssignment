@@ -1198,16 +1198,6 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
 
 
 /*========ADVENTURES AND EXCURSIONS*/
-.card-wrapper {
-    max-width: 50%;
-    Height:100%;
-    margin:0;
-    padding: 1rem 1rem;
-}
-
-.card-list .card-item {
-    list-style: none;
-}
 
 
 
@@ -1513,19 +1503,6 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
 /*--------------END--------GUEST-ROOM STYLING-----------------------*/
 
 
-
-
-/*========ADVENTURES AND EXCURSIONS*/
-.card-wrapper {
-    max-width: 50%;
-    Height:100%;
-    margin:0;
-    padding: 1rem 1rem;
-}
-
-.card-list .card-item {
-    list-style: none;
-}
 
 }
 
@@ -1844,15 +1821,5 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
 
 
 /*========ADVENTURES AND EXCURSIONS*/
-.card-wrapper {
-    max-width: 50%;
-    Height:100%;
-    margin:0;
-    padding: 1rem 1rem;
-}
-
-.card-list .card-item {
-    list-style: none;
-}
 
 }
