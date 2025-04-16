@@ -176,6 +176,11 @@ nav {
     width: 100%;
     background-color: #B9E4F4;
     margin:0;
+    cursor:pointer;
+}
+
+button{
+    cursor: pointer;
 }
 
 
@@ -648,7 +653,7 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
 .card-list .card-link .card-button{
     color:#172A3A;
     border-radius: 50%;
-    margin:30px 0 5px;/*NOTE TO SELF - MAKE RESPONSIVE*/
+    margin:30px 0 5px;
     background:none;
     cursor:pointer;
     border:2px solid black;
@@ -714,7 +719,7 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
     padding-right: 0;
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
-    min-height: 3.5rem; /* or whatever value ensures uniform height */
+    min-height: 3.5rem; 
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -726,60 +731,46 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
 
 
     #GuestRoomsGrid{
-        background-color: #D2C7B2;
+        background-color: #FBF3E6; 
         display:grid;
         grid-template-columns: 1fr;
         align-items: center;
     }
-
-    .GuestRooms-Wrapper h2{
-        font-size: 2.5rem;
-    }
-
-    .GuestRooms-Wrapper figure {
-    padding-left: 2rem;
-    padding-right: 2rem;
-    }
-
-    .GuestRooms-Wrapper figure{
-        display: grid;
-        grid-template-columns: 1fr ;
-        grid-template-rows: auto auto;
-        align-items: center;
-        margin: auto;
-        padding-left: 2rem;
-        padding-right: 2rem;
+    .GuestRooms-Wrapper{
+        background-color: #D2C7B2;
+        margin-bottom: 3rem;
+        padding: 1rem 1rem;
     }
 
 
     .GuestRooms-Wrapper h2 {
+        font-size: 2.5rem;
         grid-column: 1 / -1;
         text-align: center;
     }
     
-    /* Paragraph on the left column */
-    .GuestRooms-Wrapper figcaption {
-        grid-column: 1 / span 2;
-        grid-row: 1;
-    }
-
 
         .GuestRooms-Wrapper ul {
         padding-left: 2rem; 
         text-align: left;
         padding-bottom: 2rem;
         margin: 0 3rem;
+        justify-self: center;
+        align-items: center;
+        
     }
 
 
     .GuestRooms-Wrapper ul li { /* Add space between the Dot and Text */
         text-align: left;
         padding-top:0.4rem;
+        justify-self: left;
+        align-items: center;
     }
 
     
-    /* Let Image span vertically to grow/shrink */
-    .GuestRooms-Wrapper figure img {
+
+    .GuestRooms-Wrapper img {
         grid-column: 2;
         grid-row: 2 / span 2;
         width: 100%;
@@ -787,19 +778,6 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
         object-fit: cover;
         margin-bottom: 3rem;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1291,6 +1269,7 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
     .GuestRooms-Wrapper ul li {
         text-align: left;
         padding-top:0.4rem;
+        justify-self: left;
     }
 
     
@@ -1658,7 +1637,6 @@ hr{
     gap: 1rem;
     align-items: start;
     padding: 2rem;
-    background-color: #fff; /* optional for visibility */
     border-radius: 1rem;
     box-shadow: 0 2px 5px #03233d;
   }
