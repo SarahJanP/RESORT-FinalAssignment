@@ -652,10 +652,10 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
 
 .card-list .card-item .badge {
     color:#172A3A;
-    padding:2rem 1rem; /*NOTE TO SELF - MAKE RESPONSIVE*/
+    padding:2rem 1rem; 
     font-weight: 500;
     font-size: 1.3rem;
-    margin: 0.5rem 0 1rem;/*NOTE TO SELF - MAKE RESPONSIVE*/
+    margin: 0.5rem 0 1rem;
     background: #dde4ff;
     border-radius: 10px;
     width: fit-content;
@@ -674,21 +674,6 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
     line-height: 4rem;
 }
 
-.card-list .card-link .card-button{
-    color:#172A3A;
-    border-radius: 50%;
-    margin:30px 0 5px;
-    background:none;
-    cursor:pointer;
-    border:2px solid black;
-    padding:0 0;
-    transform:rotate(-45deg);
-}
-
-.card-list .card-link:hover .card-button{
-    color:#fff;
-    background-color: #172A3A;
-}
 
 .card-item .swiper-slide {
     max-width: 100%;
@@ -785,7 +770,7 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
     }
 
 
-    .GuestRooms-Wrapper ul li { /* Add space between the Dot and Text */
+    .GuestRooms-Wrapper ul li { /* Adds space between the Dot and Text */
         text-align: left;
         padding-top:0.4rem;
         justify-self: left;
@@ -1906,25 +1891,4 @@ hr{
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
