@@ -267,7 +267,7 @@ main img{
 
 #JumpLinks{
     display:grid;
-    background-color: none;
+    background-color: #FBF3E6;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
 
@@ -545,7 +545,7 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
 
 #Testimonials-Page{
     display:grid;
-    grid-column: 1fr;
+    grid-column: 1;
     gap: 1rem;
 }
 
