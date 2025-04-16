@@ -1475,11 +1475,11 @@ hr{
     }
 
     p{
-        font-size: clamp(1rem, 1.7rem, 3rem );
+        font-size: clamp(1rem, 1.8rem, 3rem );
     }
 
     li{
-        font-size: clamp(1rem, 1.4rem, 2rem );
+        font-size: clamp(1rem, 1.7rem, 2rem );
     }
 
 
