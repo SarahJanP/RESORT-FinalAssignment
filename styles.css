@@ -67,6 +67,7 @@ li {
     padding-bottom: 1rem;
     padding-left:1.5rem;
     padding-right:1.5rem;
+    justify-self: center;
 }
 figure{
     display:flex;
@@ -236,7 +237,7 @@ main img{
 
 
 
-/*SPA STYLING*/
+/*                                                                         SPA PAGE GENERAL STYLING  */
 #MassageTitle{
     font-size:3.1rem;
 }
@@ -521,7 +522,7 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
 
 
 
-/*-----------------------------------------------------ACTIVITIES PAGE STYLING-------------------------------------------------*/
+/*-----------------------------------------------------                        ACTIVITIES PAGE STYLING-------------------------------------------------*/
 
 
 
@@ -532,6 +533,8 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
 
 #On-Site-Activities{
     background-color: #D2C7B2;
+    margin-top: 0;
+    padding-top: 1rem;
 }
 
 #On-Site-Activities ul{
@@ -562,6 +565,15 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
 
 
 /*-------------------CREATING A CAROUSEL--------------------*/
+/*-------------------CODE SOURCED FROM - ------------------------------SOURCED CODE START 
+ https://swiperjs.com/get-started
+
+ AND EDITED ON VIDEO:
+ https://www.youtube.com/watch?v=VUtJ7FWCfZA&list=PLpwngcHZlPae68z_mLFNfbJFIJVJ_Zcx2&ab_channel=CodingNepal
+
+
+
+--------------------*/
 .card-link{
     max-width: 100%;
 
@@ -657,7 +669,7 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
     height:auto;
     display:flex;
 }
-
+/*----SOURCED CODE END---------------SOURCED CODE END - ----------SOURCED CODE END--------------------SOURCED CODE END*/
 
 
 
@@ -819,6 +831,10 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
 /*-----------MEDIA QUERIES--------------MEDIA QUERIES--------------MEDIA QUERIES-------------------------------*/
 /*-----------MEDIA QUERIES--------------MEDIA QUERIES--------------MEDIA QUERIES-------------------------------*/
 
+
+
+
+/*EXTRA SMALL SCREENS - BUGFIXING ELEMENTS */
 @media screen and (max-width:401px){
     #Footer-Info{
         grid-column: 1;
@@ -871,16 +887,6 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
         margin-bottom: 1rem;
     }
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -986,18 +992,6 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1196,7 +1190,55 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
         object-fit: cover;
         max-width: 1500px;
     }
-/*========END============ H0ME PAGE STYLE ========================*/
+
+
+/*DESKTOP ------ ACTIVITIES PAGE STYLING --------------------*/
+
+#Adventure-Rec{
+    justify-self: center;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 0.4fr 0.7fr 0.4fr 0.4fr 0.4fr;
+    max-width: 90%;
+}
+
+#Adventure-Rec h2{
+    grid-column: 1 / span 2;
+}
+
+#Adventure-Rec img{
+    grid-column: 1;
+    grid-row: 2 / span 2;
+    align-self:center;
+}
+#WaterSports{
+    padding:0;
+    padding-top: 2rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    margin:0;
+    text-align: left;
+    grid-column: 2;
+}
+
+#Adventure-Rec li{
+    padding-right: 1rem;
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+#Adventure-Rec .Activity{
+    grid-column: 1 / span 2;
+    display: flex;
+    flex-direction: column;
+    justify-self:flex-start;
+    text-align: left;
+    padding: auto 0 ;
+    margin-left: 7rem;
+
+}
+
+
 
 /*----------------------DESKTOP - GUEST-ROOM STYLING-----------------------*/
 
@@ -1208,7 +1250,7 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
     }
 
 
-      /* H2 spans both columns and is centered */
+
     .GuestRooms-Wrapper h2 {
         grid-row: 1;
         grid-column: 1 / span 2;
@@ -1216,7 +1258,7 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
     }
     
 
-    /* Let Image span vertically to grow/shrink */
+
     .GuestRooms-Wrapper img {
         grid-column: 2;
         grid-row: 3/ span 2;
@@ -1240,7 +1282,7 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
         grid-row:3 / span 2;
         margin: 0 auto;
         justify-self: center;
-        padding-left: 2rem; /*this creates space for bullets + gap from edge*/
+        padding-left: 2rem; 
         text-align: left;
         list-style-position: outside;
         padding-bottom: 2rem;
@@ -1253,14 +1295,6 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
     }
 
     
-
-
-/*--------------END--------GUEST-ROOM STYLING-----------------------*/
-
-
-
-
-/*========ADVENTURES AND EXCURSIONS*/
 
 
 
@@ -1418,12 +1452,13 @@ hr{
     }
 
     h1{             /*min preferred max */
-        font-size: clamp(2.5rem, 3rem, 5rem );
+        font-size: clamp(2.5rem, 4rem, 5rem );
         margin-top: clamp(4rem, 6rem, 8rem);
         margin-bottom: clamp(4rem, 6rem, 8rem);
     }
 
     #TITLE{
+        font-size: clamp(2.5rem, 4rem, 5rem );
         margin-top: clamp(4rem, 6rem, 8rem);
         margin-bottom: clamp(4rem, 6rem, 8rem);
     }
@@ -1750,6 +1785,53 @@ hr{
 hr{
     margin: 1rem 0;
     width:100%;
+}
+
+
+/*DESKTOP ------ ACTIVITIES PAGE STYLING --------------------*/
+
+#Adventure-Rec{
+    justify-self: center;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 0.4fr 0.7fr 0.4fr 0.4fr 0.4fr;
+    max-width: 90%;
+}
+
+#Adventure-Rec h2{
+    grid-column: 1 / span 2;
+}
+
+#Adventure-Rec img{
+    grid-column: 1;
+    grid-row: 2 / span 2;
+    align-self:center;
+}
+#WaterSports{
+    padding:0;
+    padding-top: 2rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    margin:0;
+    text-align: left;
+    grid-column: 2;
+}
+
+#Adventure-Rec li{
+    padding-right: 1rem;
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+#Adventure-Rec .Activity{
+    grid-column: 1 / span 2;
+    display: flex;
+    flex-direction: column;
+    justify-self:flex-start;
+    text-align: left;
+    padding: auto 0 ;
+    margin-left: 7rem;
+
 }
 
 
