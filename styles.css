@@ -164,7 +164,7 @@ justify-items: center;
     /* ------NAV BAR------*/
 
 
-nav {
+header nav {
     display:flex;
     flex-direction: column;
     background-color: #B9E4F4 ;
@@ -249,6 +249,10 @@ main img{
 /*                                                                         SPA PAGE GENERAL STYLING  */
 #MassageTitle{
     font-size:3.1rem;
+    text-align: left;
+    margin-left: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 0;
 }
 
 #Massages{
@@ -263,18 +267,23 @@ main img{
 
 #JumpLinks{
     display:grid;
-    background-color: #D2C7B2;
+    background-color: none;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
+
     text-align: center;
     text-decoration: none;
-    border: 1px solid #1f2117;
+    min-width: 70%;
+    max-width: 90%;
+    justify-self: center;
+
 }
 #JumpLinks p{
     text-decoration: none;
     padding:0.5rem 0;
     margin: 0 0;
-    border: 1px solid #949485;
+    line-height: 5rem;
+    
 }
 
 
@@ -323,7 +332,7 @@ main img{
 #JumpLinks p a:hover{
     color:#03233d;
     text-decoration:underline;
-    background-color: #b5ab99;
+    background-color: #ddd7cb;
     padding:0.1rem;
     border-radius: 10px;
 }
@@ -1065,7 +1074,7 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
         width:20%
     }
 
-    nav {
+    header nav {
         flex-direction: row;
     }
         /*==================== DESKTOP - HOME PAGE STYLE ========================*/
@@ -1573,8 +1582,8 @@ hr{
     }
 
 
-    nav {
-        flex-direction: row;
+    header nav{
+                flex-direction: row;
     }
         /*==================== H0ME PAGE STYLE ========================*/
     
