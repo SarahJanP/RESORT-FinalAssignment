@@ -32,6 +32,7 @@ h2 {
     padding-left:2rem;
     padding-right:2rem;
     margin: 2rem auto;
+    line-height: 6rem;
 }
 
 
@@ -45,6 +46,7 @@ h3{
     padding-bottom:1.5rem;
     padding-left: 3rem;
     padding-right: 3rem;
+    line-height: 5rem;
 }
 
 p{
@@ -56,6 +58,7 @@ p{
     margin: 1.6rem;
     padding-left:1.5rem;
     padding-right:1.5rem;
+    line-height: 3rem;
 }
 
 
@@ -68,6 +71,7 @@ li {
     padding-left:1.5rem;
     padding-right:1.5rem;
     justify-self: center;
+    line-height: 3rem;
 }
 figure{
     display:flex;
@@ -524,8 +528,17 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
     text-align: left;
 }
 
+.FiveStarReview{
 
+    align-self: flex-start;
 
+}
+
+#Testimonials-Page{
+    display:grid;
+    grid-column: 1fr;
+    gap: 1rem;
+}
 
 /*-----------------------------------------------------                        ACTIVITIES PAGE STYLING-------------------------------------------------*/
 
@@ -648,6 +661,8 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
 
 .card-list .card-item .card-title {
     color:#172A3A;
+    margin:  1rem 0;
+    line-height: 4rem;
 }
 
 .card-list .card-link .card-button{
@@ -846,6 +861,11 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
 
 /*------------------------------------ MOBILE --------------*/
 @media screen and (max-width:768px){   
+
+    p{
+        font-size: clamp(1.43rem, 1.5rem, 1.8rem );
+
+    }
     #MomentsGrid{
         grid-template-columns: 1fr;
     }
@@ -981,12 +1001,12 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
 
 
 /*---------DESKTOP---------------DESKTOP---------------- DESKTOP -------------------------------------------------*/
-@media screen and (min-width:1001px) and (max-width:1599px){
+@media screen and (min-width:1001px) and (max-width:1399px){
 
     h1{             /*min preferred max */
         font-size: clamp(2.5rem, 3.3rem, 5rem );
-        margin-top: clamp(4rem, 6rem, 8rem);
-        margin-bottom: clamp(4rem, 6rem, 8rem);
+        margin-top: clamp(4rem, 4rem, 5rem);
+        margin-bottom: clamp(4rem, 4rem, 5rem);
     }
 
     #overlap a img{
@@ -1008,9 +1028,8 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
     }
 
     h2{
-        font-size: clamp(2rem, 2.5rem, 5rem );
+        font-size: clamp(2.3rem, 2.8rem, 3.5rem );
         margin: 3rem;
-
     }
 
     h3{
@@ -1182,33 +1201,66 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
     justify-self: center;
     display:grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.5fr 0.4fr 0.7fr 0.4fr 0.4fr 0.4fr;
+    grid-template-rows: 0.5fr 0.5fr 0.2fr 0.35fr 0.4fr 0.4fr;
     max-width: 90%;
+    margin: 5rem 0;
+
 }
 
+#On-Site-Activities h1{
+    margin: 2rem 0;
+}
+
+#On-Site-Activities h3{
+    padding-top: 0;
+}
+
+
 #Adventure-Rec h2{
-    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+    grid-column: 2;
+    font-size: 4rem;
+    padding-left: 0;
+    margin-left: 0;
+    justify-content: flex-start;
+    align-self: flex-start;
 }
 
 #Adventure-Rec img{
     grid-column: 1;
-    grid-row: 2 / span 2;
-    align-self:center;
+    grid-row: 1 / span 2;
+    align-self: center;
+    justify-self: center;
+    width: 100%;
+    height: auto;
+    margin:0;
+    padding:0;
 }
 #WaterSports{
-    padding:0;
-    padding-top: 2rem;
-    padding-right: 1rem;
-    padding-bottom: 1rem;
+    justify-self: center;
+    align-self: flex-end;
+    padding: 0;
     margin:0;
     text-align: left;
-    grid-column: 2;
+    grid-column: 1 / span 2;
+    grid-row: 3;
+}
+
+#Adventure-Rec ul{
+    grid-column: 1 / span 2;
+    grid-row: 4 ;
+    margin: 0 auto;
+    margin-top:2rem;
 }
 
 #Adventure-Rec li{
     padding-right: 1rem;
     list-style-position: inside;
     padding-left: 0;
+    font-size: 1.3rem;
+    text-align: left;
+    justify-self: left;
+    align-self: center;
 }
 
 #Adventure-Rec .Activity{
@@ -1217,6 +1269,7 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
     flex-direction: column;
     justify-self:flex-start;
     text-align: left;
+    font-size: 1.35rem;
     margin-left: 7rem;
 
 }
@@ -1229,7 +1282,7 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
     .GuestRooms-Wrapper{
         display:grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 0.3fr 0.75fr 1fr 1fr;
+        grid-template-rows: 0.1fr 0.2fr 1fr 1fr;
     }
 
 
@@ -1238,6 +1291,8 @@ button:hover{   /*ADDS HOVER EFFECT TO BUTTONS*/
         grid-row: 1;
         grid-column: 1 / span 2;
         text-align: center;
+        font-size: clamp(2.8rem, 3.2rem, 5rem );
+        margin: 3rem;
     }
     
 
@@ -1365,20 +1420,6 @@ hr{
     width:100%;
 }
 
-
-
-.ReviewCard{ 
-    display:flex;
-    flex-direction: column;
-    background-color: #E2C486;
-    padding: 3rem;
-    margin: 5rem auto; 
-    max-width: 60%;  
-    border-radius: 10px;
-    text-align: center;
-    align-items: center;
-}
-
 .ReviewNAME{
     justify-content: left;
     text-align: left;
@@ -1477,6 +1518,7 @@ hr{
     }
     #testimonials p{
         font-size:1.2rem;
+        align-items: stretch;
     }
 
     button{
@@ -1823,7 +1865,18 @@ hr{
 
 
 /*TESTIMONIALS*/
+#Testimonials-Page{
+    grid-template-columns: 1fr 1fr;
+}
 
+.ReviewNAME{
+    justify-content: left;
+    text-align: left;
+}
+
+#Testimonials-Page{
+    grid-template-columns: 1fr 1fr;
+}
 
 
 .ReviewCard{ 
@@ -1832,15 +1885,14 @@ hr{
     background-color: #E2C486;
     padding: 3rem;
     margin: 5rem auto; 
-    max-width: 60%;  
+
     border-radius: 10px;
     text-align: center;
-    align-items: center;
+    align-items: stretch;
 }
 
-.ReviewNAME{
-    justify-content: left;
-    text-align: left;
+.ReviewCard:last-child{
+    grid-column: 1 / span 2;
 }
 
 
